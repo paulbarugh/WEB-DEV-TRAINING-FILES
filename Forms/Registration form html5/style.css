@@ -1,0 +1,50 @@
+@charset "utf-8";
+* {margin: 0px;padding: 0px;}
+
+body {
+    font-family: Lato;
+    font-size: 12px;
+    font-weight: ;
+    line-height: 1.5em;
+    text-align: ;
+    text-decoration: ;
+    color:dimgrey;
+    width: 600px;
+}
+
+h1 {
+    font-size: 3.0 em;
+    line-height: 3.0em;
+    color: black;
+}
+
+p {
+    font-size:  
+}
+
+span {
+    font-size:
+}
+
+
+body {
+    margin: 20px;
+}
+label {
+    line-height: 1.5em;
+}
+
+input, label, div, select{
+    margin-bottom: 1.0em;
+    color: dimgray;
+}
+
+
+/* ID Selectors */
+
+#submit {
+    color: black;
+}
+
+
+
