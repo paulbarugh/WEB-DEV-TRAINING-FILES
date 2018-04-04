@@ -1,0 +1,115 @@
+/* WALLPAPER */
+
+.background {
+    color: #000;
+    background-image: url(https://images.unsplash.com/photo-1519317245869-d6943e4a4f9a?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=94bc34e9fb6331bd095b109cbe5b6145&auto=format&fit=crop&w=1050&q=80);
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.tint {
+    z-index: 0;
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+/* NAV*/
+
+.nav-link.active {
+    color: aliceblue !important;
+    background-color: cadetblue;
+}
+
+.navbar {
+    padding-bottom: 0;
+    padding-top: 0;
+}
+
+.nav-link {
+    color: cadetblue !important;
+    font-weight: 600;
+}
+
+.navbar-brand {
+    font-weight: 600;
+    color: dimgray !important;
+}
+
+.navbar-expand-lg .navbar-nav > li > a:hover {
+    color: dimgrey !important;
+}
+
+
+.fa-user-plus,
+.fa-sign-in-alt {
+    color: dimgrey;
+    padding-right: 3px;
+}
+
+.fa-bullseye {
+    color: cadetblue;
+}
+
+/* Title content */
+
+.content {
+    text-align: center;
+    padding-top: 35%;
+    padding-bottom: 35%;
+    text-shadow: 1px 4px 3px rgba(0,0,0,0.4),
+                 1px 8px 13px rgba(0,0,0,0.2);
+}
+
+.title2 {
+    font-weight: 400;
+    color: aliceblue;
+}
+
+.cta {
+    color: aliceblue;
+    margin-right: 10px;
+}
+
+h1 {
+    color: aliceblue;
+    font-weight: 700;
+    display: inline;
+}
+
+h4 {
+    color: aliceblue;
+}
+
+h3 {
+    color: cadetblue;
+    display: inline;
+}
+
+hr {
+    background-color: aliceblue;
+    height: 2px;
+    width: 25%;
+    min-width: 200px;
+}
+
+.btn-light {
+    background-color: cadetblue;
+    border: 0;
+    color: aliceblue;
+}
+
+body {
+    font-family: lato;
+}
+
+.title {
+    padding-bottom: 5px;
+}

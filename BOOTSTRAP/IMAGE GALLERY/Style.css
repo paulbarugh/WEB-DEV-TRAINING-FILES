@@ -1,0 +1,77 @@
+/* NAVBAR */
+
+body {
+    padding-top: 80px;
+}
+
+.navbar-inverse .navbar-nav>li>a {
+    color: #fff;
+}
+.navbar-inverse .navbar-brand {
+    color: #fff;
+}
+
+/* main banner image */
+
+.jumbotron {
+    background-image: url(https://images.unsplash.com/photo-1496677676553-739055930416?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=a7a54345cb515078f4afc386cc4d192b&auto=format&fit=crop&w=1249&q=80);
+    width: 100%;
+    background-position: center
+}
+
+.header,
+p {
+    color: aliceblue !important;
+
+}
+
+/* gsllery */
+
+.image1 {
+    background-image: url(https://images.unsplash.com/photo-1471079222144-ee7466f9b7ff?ixlib=rb-0.3.5&s=1c7329af988e6ece263f019e568ef980&auto=format&fit=crop&w=1267&q=80);
+}
+
+.image2 {
+    background-image: url(https://images.unsplash.com/photo-1503795811880-36ba40505055?ixlib=rb-0.3.5&s=da56b93fee4d3aa86b6515b9f36db5b2&auto=format&fit=crop&w=1268&q=80);
+}
+
+.image3 {
+    background-image: url(https://images.unsplash.com/photo-1489211914964-32c31f87e86b?ixlib=rb-0.3.5&s=cb9641093fe78e1d94883565580745bb&auto=format&fit=crop&w=1052&q=80);
+}
+
+.image4 {
+    background-image: url(https://images.unsplash.com/photo-1498248193836-88f8c8d70a3f?ixlib=rb-0.3.5&s=347d7ee0e50c0053058494a214debaa1&auto=format&fit=crop&w=1191&q=80);
+}
+
+.image5 {
+    background-image: url(https://images.unsplash.com/photo-1504015946683-8d1ed7939e46?ixlib=rb-0.3.5&s=c75676036c69ab4ce6882a5e711752dd&auto=format&fit=crop&w=1050&q=80);
+}
+
+.image6 {
+    background-image: url(https://images.unsplash.com/photo-1468082547792-d37c6c74003e?ixlib=rb-0.3.5&s=3d0350b28df366b170719a7d6c07aa5e&auto=format&fit=crop&w=1055&q=80);
+}
+
+.image7 {
+    background-image: url(https://images.unsplash.com/photo-1519549735396-e5f6f8ee578c?ixlib=rb-0.3.5&s=2cf10b4913251b26642b12381e6629f1&auto=format&fit=crop&w=1050&q=80);
+}
+
+.image8 {
+    background-image: url(https://images.unsplash.com/photo-1468774871041-fc64dd5522f3?ixlib=rb-0.3.5&s=6aa3a457f869d3996cec68746bd35fc3&auto=format&fit=crop&w=1189&q=80);
+}
+
+.image9 {
+    background-image: url(https://images.unsplash.com/photo-1520655245726-9ef9c6644149?ixlib=rb-0.3.5&s=52c6889325483d052dd4f7b47030fd5c&auto=format&fit=crop&w=700&q=80);
+}
+
+
+.image {
+    width: 100%;
+    height: 250px;
+    background-size: cover;
+    background-position: center;
+}
+
+.gallery {
+    margin-bottom: 50px;
+}
+
