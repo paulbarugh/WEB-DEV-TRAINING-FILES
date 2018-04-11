@@ -1,0 +1,143 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    padding-top: 40px;
+}
+
+/**************** NAV ****************/
+
+.nav-link.active {
+    color: aliceblue !important;
+    background-color: #02394a;
+}
+
+.navbar {
+    padding-bottom: 0;
+    padding-top: 0;
+}
+
+.nav-link {
+    color: #043565 !important;
+    font-weight: 600;
+}
+
+.navbar-brand {
+    font-weight: 600;
+    color: dimgray !important;
+}
+
+.navbar-expand-lg .navbar-nav > li > a:hover {
+    color: dimgrey !important;
+}
+
+
+.fa-user-plus,
+.fa-sign-in-alt {
+    color: #043565;
+    padding-right: 3px;
+}
+
+.fa-bullseye {
+    color: cadetblue;
+}
+
+.logo {
+    height: 25px;
+}
+/**************** TITLE ****************/
+
+.title {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+        "title1 title2 title3"
+        ;
+    grid-area: title;
+    background-image: url('IMG/Landing-page.jpg');
+    height: 97vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    /*    justify-self: center, start, end*/
+    /*    align-self: center, start, end*/
+}
+
+.title1 {}
+
+.title2 {}
+
+.title3 {}
+
+
+/**************** BODY ****************/
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+        "header header"
+        "content1 content1"
+        "content2 content2"
+        "content3 content3"
+        "footer footer";
+        grid-gap: 10px;
+}
+
+.grid div:nth-child(even) {
+    background-color: red;
+}
+
+.grid div:nth-child(odd) {
+    background-color: green;
+}
+
+.header {
+    grid-area: header;
+    background-image:
+}
+
+.sidebar {
+    grid-area: sidebar;
+    background-image:
+}
+
+.content1 {
+    grid-area: content1;
+    background-image:
+}
+
+.content2 {
+    grid-area: content2;
+    background-image:
+}
+
+.content3 {
+    grid-area: content3;
+    background-image:
+}
+
+.footer {
+    grid-area: footer;
+    background-image:
+}
+
+
+@media screen and (min-width:736px){
+    .grid {
+    display: grid;
+    grid-template-columns: 1fr 380px 380px 380px 1fr;
+    grid-template-areas:
+        ". header header header ."
+        ". content1 content1 content1 ."
+        ". content2 content2 content2 ."
+        ". content3 content3 content3 ."
+        ". footer footer footer .";
+    }
+
+}
+
+autoprefixer({ grid: true })
