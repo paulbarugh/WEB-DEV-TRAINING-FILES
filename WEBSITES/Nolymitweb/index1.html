@@ -11,14 +11,12 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
     <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-2.1.3.min.js" integrity="sha256-ivk71nXhz9nsyFDoYoGf2sbjrR9ddh+XDkCcfZxjvcM=" crossorigin="anonymous"></script>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-
-
+    <script type="text/javascript" src="firefly2.js"></script>
 
     <title>Nolymit multilingual voice chatbot</title>
 
@@ -68,7 +66,11 @@
             <h4>Bespoke AI technology that is designed to meet the needs of a fast-paced global marketplace.</h4>
         </div>
 
-        <!-------- SCROLL --------->
+
+        <div id="container"></div>
+
+
+
         <script type="text/javascript">
             $(function() {
                 $('a[href*=#]').on('click', function(e) {
@@ -78,13 +80,14 @@
                     }, 500, 'linear');
                 });
             });
+
         </script>
         <div class="scroll">
             <section id="section10" class="demo">
                 <a href="#header"><span></span>Scroll</a>
             </section>
         </div>
-        <!-------- GREETING --------->
+
         <div class="greeting">
             <h1 class="type"></h1>
             <script type="text/javascript" src="typed.js"></script>
@@ -110,18 +113,79 @@
                     backSpeed: 80,
                     loop: true,
                 });
-            </script>
-        </div>
-        <!-------- FIREFLIES --------->
-        <div class="fireflies">
-            <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-            <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js">
-            </script>
-            <script type="text/javascript" src="firefly2.js"></script>
-        </div>
 
+            </script>
+        </div>
     </div>
 
+    <div class="container">
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js">
+
+
+        </script>
+        <script>
+            var fireflies = 25;
+            var $container = $(".container");
+            var $containerWidth = $container.width();
+            var $containerHeight = $container.height();
+            var Tweens = [];
+            var master = new TimelineMax();
+
+            for (var i = 0; i < fireflies; i++) {
+                var firefly = $('<div class="firefly"></div>');
+                TweenLite.set(firefly, {
+                    x: Math.random() * $containerWidth,
+                    y: Math.random() * $containerHeight
+                });
+                $container.append(firefly);
+                flyTheFirefly(firefly);
+                Tweens.push(firefly);
+            }
+
+            function flyTheFirefly(elm) {
+                var flyTl = new TimelineMax();
+                var fadeTl = new TimelineMax({
+                    delay: Math.floor(Math.random() * 2) + 1,
+                    repeatDelay: Math.floor(Math.random() * 6) + 1,
+                    repeat: -1
+                });
+
+                fadeTl.to(
+                    [elm],
+                    0.25, {
+                        opacity: 0.25,
+                        yoyo: true,
+                        repeat: 1,
+                        repeatDelay: 0.2,
+                        yoyo: true
+                    },
+                    Math.floor(Math.random() * 6) + 1
+                );
+
+                flyTl
+                    .set(elm, {
+                        scale: Math.random() * 0.75 + 0.5
+                    })
+                    .to(elm, Math.random() * 100 + 100, {
+                        bezier: {
+                            values: [{
+                                    x: Math.random() * $containerWidth,
+                                    y: Math.random() * $containerHeight
+                                },
+                                {
+                                    x: Math.random() * $containerWidth,
+                                    y: Math.random() * $containerHeight
+                                }
+                            ]
+                        },
+                        onComplete: flyTheFirefly,
+                        onCompleteParams: [elm]
+                    });
+            }
+
+        </script>
+    </div>
 
     <!------------------------ BODY ------------------------->
     <div class="grid">
@@ -133,7 +197,6 @@
     </div>
 
 </body>
-
 
 
 </html>

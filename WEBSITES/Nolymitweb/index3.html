@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="author" content="">
+<link rel="stylesheet" href="style3.css">
+
+<script type="text/javascript" src="firefly2.js"></script>
+
+<title>New HMTL document by NewJect</title>
+
+</head>
+<body>
+
+<div class="container">
+ <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js">
+</script>
+ <script>var fireflies = 25;
+var $container = $(".container");
+var $containerWidth = $container.width();
+var $containerHeight = $container.height();
+var Tweens = [];
+var master = new TimelineMax();
+
+for (var i = 0; i < fireflies; i++) {
+  var firefly = $('<div class="firefly"></div>');
+  TweenLite.set(firefly, {
+    x: Math.random() * $containerWidth,
+    y: Math.random() * $containerHeight
+  });
+  $container.append(firefly);
+  flyTheFirefly(firefly);
+  Tweens.push(firefly);
+}
+
+function flyTheFirefly(elm) {
+  var flyTl = new TimelineMax();
+  var fadeTl = new TimelineMax({
+    delay: Math.floor(Math.random() * 2) + 1,
+    repeatDelay: Math.floor(Math.random() * 6) + 1,
+    repeat: -1
+  });
+
+  fadeTl.to(
+    [elm],
+    0.25,
+    { opacity: 0.25, yoyo: true, repeat: 1, repeatDelay: 0.2, yoyo: true },
+    Math.floor(Math.random() * 6) + 1
+  );
+
+  flyTl
+    .set(elm, {scale: Math.random() * 0.75 + 0.5})
+    .to(elm, Math.random() * 100 + 100, {
+    bezier: {
+      values: [
+        {
+          x: Math.random() * $containerWidth,
+          y: Math.random() * $containerHeight
+        },
+        {
+          x: Math.random() * $containerWidth,
+          y: Math.random() * $containerHeight
+        }
+      ]
+    },
+    onComplete: flyTheFirefly,
+    onCompleteParams: [elm]
+  });
+}
+</script>
+
+</div>
+
+</body>
+</html>

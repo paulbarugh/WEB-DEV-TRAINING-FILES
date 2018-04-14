@@ -59,7 +59,7 @@ console.log(colours[1]); // "yellow"
 var colours = ["red", "yellow", "green", "blue"];
 
 colours.forEach(function(colour){
-    //colour is a placeholder and be called anything you want
+    //colour is a placeholder and can be called anything you want
     console.log(colour);
 });
 
